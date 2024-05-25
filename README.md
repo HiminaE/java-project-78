@@ -1,3 +1,9 @@
+
+# Валидатор данных
+Валидотор данных- это библиотека, реализующая проверку данных по заданным критериям. Настроены проверки для трёх типов данных:  
+-строка (String)  
+-целое число (Integer)  
+-коллекция (Map)  
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/HiminaE/java-project-78/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/HiminaE/java-project-78/actions)
 [![Actions Status](https://github.com/HiminaE/java-project-78/actions/workflows/gradle.yml/badge.svg)](https://github.com/HiminaE/java-project-78/actions)
