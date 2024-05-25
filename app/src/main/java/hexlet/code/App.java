@@ -3,13 +3,6 @@
  */
 package hexlet.code;
 
-import org.example.list.LinkedList;
-
-import static org.example.utilities.StringUtils.join;
-import static org.example.utilities.StringUtils.split;
-
-import org.apache.commons.text.WordUtils;
-
 public class App {
     public static void main(String[] args) {
 

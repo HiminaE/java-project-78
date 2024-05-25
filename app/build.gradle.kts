@@ -3,15 +3,17 @@
  */
 
 plugins {
-    id("buildlogic.java-application-conventions")
+    application
+    //id("checkstyle")
 }
-
+group = "hexlet.code"
+version = "1.0-SNAPSHOT"
 dependencies {
-    implementation("org.apache.commons:commons-text")
-    implementation(project(":utilities"))
+    // implementation("org.apache.commons:commons-text")
+    // implementation(project(":utilities"))
 }
 
 application {
     // Define the main class for the application.
-    mainClass = "org.example.app.App"
+    mainClass = "hexlet.code.App"
 }
