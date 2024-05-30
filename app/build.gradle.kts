@@ -8,9 +8,10 @@ plugins {
 }
 group = "hexlet.code"
 version = "1.0-SNAPSHOT"
+
 dependencies {
-    // implementation("org.apache.commons:commons-text")
-    // implementation(project(":utilities"))
+    testImplementation("org.junit:junit-bom:5.9.1")
+    testImplementation(platform("org.junit.jupiter:junit-jupiter"))
 }
 
 application {
