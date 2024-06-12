@@ -12,6 +12,7 @@ import java.util.Map;
 
 public class MapSchemaTests {
     private MapSchema mapSchema;
+    private Validator val;
     @BeforeEach
     void beforeEach() {
         Validator val = new Validator();
@@ -37,8 +38,8 @@ public class MapSchemaTests {
     @Test
     public void testShape() {
         Map<String, BaseSchema<String>> schemas = new HashMap<>();
-        schemas.put("firstName", Validator.string().required());
-        schemas.put("lastName", Validator.string().required().minLength(2));
+        schemas.put("firstName", val.string().required());
+        schemas.put("lastName", val.string().required().minLength(2));
         mapSchema.shape(schemas);
         Map<String, String> human1 = new HashMap<>();
         human1.put("firstName", "John");
