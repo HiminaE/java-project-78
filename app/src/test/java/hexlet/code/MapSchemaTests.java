@@ -24,6 +24,7 @@ public class MapSchemaTests {
     public void testSizeOf() {
         Validator val = new Validator();
         var mapSchema = val.map();
+
         assertTrue(mapSchema.sizeof(0).isValid(new HashMap<>()));
         HashMap<String, String> data = new HashMap<>();
         data.put("key1", "value1");
