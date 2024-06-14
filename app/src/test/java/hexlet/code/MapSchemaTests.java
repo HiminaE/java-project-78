@@ -10,11 +10,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MapSchemaTests {
-    private MapSchema mapSchema;
-    private Validator val;
 
     @Test
     public void testRequired() {
+        Validator val = new Validator();
+        var mapSchema = val.map();
         assertTrue(mapSchema.required().isValid(new HashMap<>()));
         assertFalse(mapSchema.isValid(null));
         HashMap<String, String> data = new HashMap<>();
@@ -23,6 +23,8 @@ public class MapSchemaTests {
     }
     @Test
     public void testSizeOf() {
+        Validator val = new Validator();
+        var mapSchema = val.map();
         assertTrue(mapSchema.sizeof(0).isValid(new HashMap<>()));
         HashMap<String, String> data = new HashMap<>();
         data.put("key1", "value1");
@@ -33,7 +35,7 @@ public class MapSchemaTests {
     @Test
     public void testShape() {
         Validator val = new Validator();
-        mapSchema = val.map();
+        var mapSchema = val.map();
 
         Map<String, BaseSchema<String>> schemas = new HashMap<>();
         schemas.put("firstName", val.string().required());
