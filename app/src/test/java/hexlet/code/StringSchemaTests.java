@@ -10,6 +10,8 @@ public class StringSchemaTests {
     public void testRequired() {
         Validator val = new Validator();
         StringSchema s = val.string();
+
+        assertTrue(s.isValid(""));
         assertTrue(s.required().isValid("string"));
         assertFalse(s.required().isValid(""));
         assertFalse(s.required().isValid(null));
