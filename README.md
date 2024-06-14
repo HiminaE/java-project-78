@@ -44,3 +44,28 @@ Map<String, Object> user2 = Map.of(
 );
 schema.isValid(user3); // -> false, user name cannot be empty
 ~~~
+
+## Реализованные проверки
+
+- All validation types:
+    - `required()`: Set checking data for being not null (or empty string).
+    - `isValid()`: Perform actual checking with boolean return.
+
+
+- String validation:
+    - `string()`: Set up validator to check a string.
+    - `minLength(int length)`: Set the minimum required length for a string.
+    - `contains(String substring)`: Validate if a string contains a specific substring.
+
+
+- Number Validation:
+    - `number()`: Set up validator to check an integer.
+    - `positive()`: Ensure that a number is positive.
+    - `range(int start, int end)`: Define a range within which the number should fall.
+
+
+- Map Validation:
+    - `map()`: Set up validator to check a map.
+    - `sizeof(int exactSize)`: Verify the exact size of a map.
+    - `shape(Map<String, BaseSchema> validationRules)`: Define a map by specifying field names and their corresponding validation rules.
+
