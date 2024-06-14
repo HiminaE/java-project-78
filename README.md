@@ -6,7 +6,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/8220ef67b27b1f9131de/maintainability)](https://codeclimate.com/github/HiminaE/java-project-78/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/8220ef67b27b1f9131de/test_coverage)](https://codeclimate.com/github/HiminaE/java-project-78/test_coverage)
 
-Data Validator - это библиотека, которая предоставляет возможность проверки данных на основе настраиваемых требований. Она поддерживает проверку строк, чисел и карт, позволяя определять конкретные правила для каждого типа данных.
+Validator - это библиотека, которая предоставляет возможность проверки данных на основе настраиваемых требований. Она поддерживает проверку строк, чисел и карт, позволяя определять конкретные правила для каждого типа данных.
 
 ### Пример использования:
 
