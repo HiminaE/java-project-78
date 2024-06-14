@@ -8,4 +8,39 @@
 
 Data Validator - это библиотека, которая предоставляет возможность проверки данных на основе настраиваемых требований. Она поддерживает проверку строк, чисел и карт, позволяя определять конкретные правила для каждого типа данных.
 
-#### Пример использования:
+### Пример использования:
+
+~~~
+Validator v = new Validator();
+
+// Create validation rules for a map with data
+// Each field is set up with its own rules
+Map<String, BaseSchema> validationRules = new HashMap<>();
+
+// Field "name" should be string and cannot be blank
+validationRules.put("name", v.string().required());
+// Field "age" should be a positive number if used, but can be left blank (null)
+validationaRules.put("age", v.number().positive());
+
+// Get object to check map with data using created rules
+MapSchema schema = v.map().shape(validationRules);
+
+// Check objects
+Map<String, Object> user1 = Map.of(
+        "name", "David",
+        "age", 25
+);
+schema.isValid(user1); // -> true
+
+Map<String, Object> user2 = Map.of(
+        "name", "Ann",
+        "age", null
+);
+schema.isValid(user2); // -> true, age is not required
+
+Map<String, Object> user2 = Map.of(
+        "name", "",
+        "age", 21
+);
+schema.isValid(user3); // -> false, user name cannot be empty
+~~~
