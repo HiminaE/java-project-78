@@ -27,20 +27,20 @@ MapSchema schema = v.map().shape(validationRules);
 
 // Check objects
 Map<String, Object> user1 = Map.of(
-        "name", "David",
+        "name", "John",
         "age", 25
 );
 schema.isValid(user1); // -> true
 
 Map<String, Object> user2 = Map.of(
-        "name", "Ann",
+        "name", "Anna",
         "age", null
 );
 schema.isValid(user2); // -> true, age is not required
 
 Map<String, Object> user2 = Map.of(
         "name", "",
-        "age", 21
+        "age", 18
 );
 schema.isValid(user3); // -> false, user name cannot be empty
 ~~~
