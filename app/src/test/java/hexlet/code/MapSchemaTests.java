@@ -16,6 +16,7 @@ public class MapSchemaTests {
         Validator val = new Validator();
         MapSchema mapSchema = val.map();
 
+        assertTrue(mapSchema.isValid(null));
         assertTrue(mapSchema.required().isValid(new HashMap<>()));
         assertFalse(mapSchema.isValid(null));
         HashMap<String, String> data = new HashMap<>();
